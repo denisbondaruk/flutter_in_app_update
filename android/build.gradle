@@ -25,6 +25,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (!project.hasProperty("android.buildCacheDir")) {
+        namespace "de.ffuf.in_app_update"
+    }
     compileSdkVersion 31
 
     sourceSets {
